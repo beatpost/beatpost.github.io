@@ -333,6 +333,7 @@ h2 em { font-style: italic; font-weight: 500; color: var(--red); }
 .map .pin-h { fill: var(--gold); stroke: var(--surface); stroke-width: 3.5; }
 .map .pin-t { fill: var(--red); stroke: var(--surface); stroke-width: 3.5; }
 .map .pin-dot { fill: var(--surface); stroke: none; }
+.map .pin-d { fill: var(--ink); stroke: var(--surface); stroke-width: 3.5; }
 .legend { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 12px; font-size: 14px; color: var(--mute); }
 .legend span { display: inline-flex; align-items: center; gap: 8px; }
 .legend i { width: 22px; height: 6px; border-radius: 3px; display: inline-block; }
@@ -740,12 +741,12 @@ h2 em { font-style: italic; font-weight: 500; color: var(--red); }
       <div class="map-block">
         <div class="reveal">
           <h3>Everything's walkable</h3>
-          <p>Penn Station, the hotel and the Lyric sit in a tight triangle on the West Side. Once we're off the train we never need a cab.</p>
+          <p>Penn Station, the hotel, dinner and the Lyric are all within about 15 minutes of each other on the West Side. Once we're off the train we never need a cab.</p>
         </div>
         <figure class="map-wrap reveal">
           <svg class="map" viewBox="0 0 600 530" role="img" aria-labelledby="map-t map-d">
             <title id="map-t">Walking map of Midtown West</title>
-            <desc id="map-d">From Penn Station at 33rd Street, walk north on 8th Avenue to the hotel on West 39th Street. From the hotel, walk to 8th Avenue, north to 42nd Street, and east to the Lyric Theatre between 42nd and 43rd Streets.</desc>
+            <desc id="map-d">From Penn Station at 33rd Street, walk north on 8th Avenue to the hotel on West 39th Street. From the hotel, walk to 8th Avenue, north to 42nd Street, and east to the Lyric Theatre between 42nd and 43rd Streets. Dinner at Churrascaria Plataforma is on West 49th Street just west of 8th Avenue.</desc>
 
             <rect class="park" x="430" y="245.3" width="120" height="46.3" rx="3"/>
             <rect class="penn" x="190" y="453.7" width="120" height="46.3" rx="3"/>
@@ -788,6 +789,9 @@ h2 em { font-style: italic; font-weight: 500; color: var(--red); }
             <circle class="pin-dot" cx="293" cy="233.7" r="4"/>
             <text class="t-place lbl" x="144" y="350" text-anchor="middle">Pestana CR7</text>
             <text class="t-place lbl" x="293" y="210" text-anchor="middle">Lyric Theatre</text>
+            <circle class="pin-d" cx="166" cy="83.2" r="11"/>
+            <circle class="pin-dot" cx="166" cy="83.2" r="3.5"/>
+            <text class="t-place lbl" x="150" y="122" text-anchor="middle">Dinner</text>
           </svg>
           <figcaption class="legend">
             <span><i class="l1"></i>Penn Station to the hotel &middot; about 10 min</span>
@@ -869,8 +873,9 @@ h2 em { font-style: italic; font-weight: 500; color: var(--red); }
             <li class="stop"><time>1:18 PM</time><span class="dot"></span><div><b>Train to the city</b><p>Raritan Valley line. Change at Newark Penn for the 2:24 to New York.</p></div></li>
             <li class="stop"><time>2:44 PM</time><span class="dot"></span><div><b>Arrive at Penn Station</b><p>Up to the street and north on 8th Avenue.</p></div></li>
             <li class="stop"><time>3:00 PM</time><span class="dot"></span><div><b>Check in at the Pestana</b><p>Drop the bags and get ready for the show.</p></div></li>
-            <li class="stop"><time>5:00 PM</time><span class="dot"></span><div><b>Early dinner</b><p>Somewhere close by. Reservation coming soon.</p></div></li>
-            <li class="stop"><time>6:30 PM</time><span class="dot"></span><div><b>Find our seats</b><p>Balcony, Row D.</p></div></li>
+            <li class="stop"><time>4:40 PM</time><span class="dot"></span><div><b>Walk up to dinner</b><p>About 15 minutes up 8th Avenue to West 49th.</p></div></li>
+            <li class="stop"><time>5:00 PM</time><span class="dot"></span><div><b>Dinner at Churrascaria Plataforma</b><p>Brazilian steakhouse, table for two. The skewers keep coming until we flip our cards to red.</p></div></li>
+            <li class="stop"><time>6:30 PM</time><span class="dot"></span><div><b>Find our seats</b><p>An 8-minute walk from dinner. Balcony, Row D.</p></div></li>
             <li class="stop key"><time>7:00 PM</time><span class="dot"></span><div><b>Curtain up</b><p>Harry Potter and the Cursed Child.</p></div></li>
             <li class="stop"><time>10:00 PM</time><span class="dot"></span><div><b>Walk back to the hotel</b><p>Six minutes, past the lights of 42nd Street.</p></div></li>
           </ol>
