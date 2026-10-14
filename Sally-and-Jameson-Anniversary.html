@@ -329,6 +329,8 @@ h2 em { font-style: italic; font-weight: 500; color: var(--red); }
 .map .route { fill: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
 .map .r1 { stroke: var(--blue); }
 .map .r2 { stroke: var(--red); }
+.map .r3 { stroke: var(--ink); }
+.map .t-sub { font-size: 15px; fill: var(--mute); }
 .map .pin-a { fill: var(--blue); stroke: var(--surface); stroke-width: 3; }
 .map .pin-h { fill: var(--gold); stroke: var(--surface); stroke-width: 3.5; }
 .map .pin-t { fill: var(--red); stroke: var(--surface); stroke-width: 3.5; }
@@ -339,6 +341,7 @@ h2 em { font-style: italic; font-weight: 500; color: var(--red); }
 .legend i { width: 22px; height: 6px; border-radius: 3px; display: inline-block; }
 .legend .l1 { background: var(--blue); }
 .legend .l2 { background: var(--red); }
+.legend .l3 { background: var(--ink); }
 
 /* ---------- The show: curtain + marquee ---------- */
 .show {
@@ -566,7 +569,8 @@ h2 em { font-style: italic; font-weight: 500; color: var(--red); }
     .marquee.reveal { animation-name: glowup; animation-range: entry 0% cover 40%; }
     .map .route { animation: draw linear both; animation-timeline: --map; }
     .map .r1 { animation-range: entry 70% cover 45%; }
-    .map .r2 { animation-range: cover 42% cover 62%; }
+    .map .r2 { animation-range: cover 40% cover 56%; }
+    .map .r3 { animation-range: cover 56% cover 72%; }
     .rail-fill { animation: fill linear both; animation-timeline: --program; animation-range: cover 18% cover 72%; }
     .cast { view-timeline-name: --cast; }
     .strip-viewport { overflow-x: clip; }
@@ -746,7 +750,7 @@ h2 em { font-style: italic; font-weight: 500; color: var(--red); }
         <figure class="map-wrap reveal">
           <svg class="map" viewBox="0 0 600 530" role="img" aria-labelledby="map-t map-d">
             <title id="map-t">Walking map of Midtown West</title>
-            <desc id="map-d">From Penn Station at 33rd Street, walk north on 8th Avenue to the hotel on West 39th Street. From the hotel, walk to 8th Avenue, north to 42nd Street, and east to the Lyric Theatre between 42nd and 43rd Streets. Dinner at Churrascaria Plataforma is on West 49th Street just west of 8th Avenue.</desc>
+            <desc id="map-d">From Penn Station at 33rd Street, walk north on 8th Avenue to the hotel on West 39th Street. From the hotel, walk up 8th Avenue to dinner at Churrascaria Plataforma on West 49th Street, about 15 minutes. From dinner, walk back down 8th Avenue to the Lyric Theatre between 42nd and 43rd Streets, about 8 minutes.</desc>
 
             <rect class="park" x="430" y="245.3" width="120" height="46.3" rx="3"/>
             <rect class="penn" x="190" y="453.7" width="120" height="46.3" rx="3"/>
@@ -780,7 +784,8 @@ h2 em { font-style: italic; font-weight: 500; color: var(--red); }
             </g>
 
             <path class="route r1" pathLength="1" d="M190 453.7V314.7H144"/>
-            <path class="route r2" pathLength="1" d="M144 308.5H184V251.3H293"/>
+            <path class="route r2" pathLength="1" d="M144 308.5H184V89.2H166"/>
+            <path class="route r3" pathLength="1" d="M166 77.2H196V233.7H293"/>
 
             <circle class="pin-a" cx="190" cy="453.7" r="7.5"/>
             <circle class="pin-h" cx="144" cy="314.7" r="12"/>
@@ -789,13 +794,15 @@ h2 em { font-style: italic; font-weight: 500; color: var(--red); }
             <circle class="pin-dot" cx="293" cy="233.7" r="4"/>
             <text class="t-place lbl" x="144" y="350" text-anchor="middle">Pestana CR7</text>
             <text class="t-place lbl" x="293" y="210" text-anchor="middle">Lyric Theatre</text>
-            <circle class="pin-d" cx="166" cy="83.2" r="11"/>
-            <circle class="pin-dot" cx="166" cy="83.2" r="3.5"/>
-            <text class="t-place lbl" x="150" y="122" text-anchor="middle">Dinner</text>
+            <circle class="pin-d" cx="166" cy="83.2" r="12"/>
+            <circle class="pin-dot" cx="166" cy="83.2" r="4"/>
+            <text class="t-place lbl" x="176" y="120" text-anchor="end">Plataforma</text>
+            <text class="t-sub lbl" x="176" y="139" text-anchor="end">Dinner at 5:00</text>
           </svg>
           <figcaption class="legend">
             <span><i class="l1"></i>Penn Station to the hotel &middot; about 10 min</span>
-            <span><i class="l2"></i>Hotel to the Lyric &middot; about 6 min</span>
+            <span><i class="l2"></i>Hotel to dinner &middot; about 15 min</span>
+            <span><i class="l3"></i>Dinner to the Lyric &middot; about 8 min</span>
           </figcaption>
         </figure>
       </div>
